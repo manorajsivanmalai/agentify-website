@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agentify - Revolutionizing Blockchain with AI Agents</title>
   <meta name="description" content="Agentify simplifies blockchain with AI agents, enabling easy creation, monetization, and integration of smart contracts, powered by $AGY tokens.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -79,7 +79,7 @@
 
     </div>
 
-    <!-- Exchanges Bar ("Available on:") -->
+    <!-- Exchanges Bar ("Available on:") with Horizontal Scroll -->
     <div class="exchanges-bar">
       <span class="exchanges-label">Available on:</span>
       <div class="exchange-pills-wrap">
@@ -263,7 +263,7 @@
       </div>
     </section>
 
-    <!-- Tokenomics Section (Exact Match to User Image 1 & 2) -->
+    <!-- Tokenomics Section -->
     <section class="tokenomics-section" id="tokenomics">
       <div class="tokenomics-grid">
         <div class="tokenomics-info">
@@ -294,11 +294,11 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section (Interactive Mobile Slider) -->
     <section class="features-section" id="features">
       <div class="section-badge-ellipse">FEATURES</div>
       
-      <div class="features-grid">
+      <div class="features-grid" id="features-grid">
         <!-- Card 1 -->
         <div class="feature-card-wrap">
           <div class="feature-card">
@@ -352,13 +352,14 @@
         </div>
       </div>
 
+      <!-- Features Carousel Controls -->
       <div class="carousel-controls" style="margin-top: 2rem; justify-content: flex-end;">
         <div class="carousel-arrows">
           <div class="arrow-btn-wrap">
-            <button class="arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="arrow-btn" id="prev-feature-btn"><i class="fa-solid fa-arrow-left"></i></button>
           </div>
           <div class="arrow-btn-wrap">
-            <button class="arrow-btn active-next"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="arrow-btn active-next" id="next-feature-btn"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -488,7 +489,7 @@
       </div>
     </section>
 
-    <!-- Footer Section (Exact Match to User Image 3 & Image 4 Mask) -->
+    <!-- Footer Section -->
     <footer>
       <div class="footer-frame-container">
         <div class="footer-polygon-bg-image"></div>
@@ -534,13 +535,12 @@
 
           </div>
 
-         
-
-        </div>
-         <!-- Bottom Right Copyright Row -->
+          <!-- Bottom Right Copyright Row -->
           <div class="footer-copyright-row">
             <span>Copyright ©2025 AGENTIFY., Ltd. All right reserved</span>
           </div>
+
+        </div>
       </div>
     </footer>
 
@@ -552,6 +552,6 @@
     <span id="toast-text">Contract address copied to clipboard!</span>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=2.0"></script>
 </body>
 </html>

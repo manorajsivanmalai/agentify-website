@@ -96,10 +96,9 @@ body {
   margin-top: 0.75rem;
   margin-bottom: 1.25rem;
   padding: 0.4rem 1rem;
-   background:linear-gradient(135deg, #147626, #424e7a);
+  background: rgba(10, 16, 30, 0.9);
   border: 1px solid var(--border-green);
-  /* clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); */
-  border-radius: 12px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -107,13 +106,13 @@ body {
 }
 
 .announcement-badge {
-  /* background: #10b981; */
-  color: #fff;
+  background: #10b981;
+  color: #050811;
   padding: 0.25rem 0.85rem;
   font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing:3px;
-  /* clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px); */
+  letter-spacing: 0.5px;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
 }
 
 .announcement-text {
@@ -127,7 +126,7 @@ body {
   z-index: 2;
   width: 100%;
   margin-bottom: 3.5rem;
-  /* box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7); */
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
 }
 
 .hero-polygon-bg-image {
@@ -243,7 +242,7 @@ body {
   background: none;
   border: 1px solid var(--border-cyan);
   color: var(--text-main);
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   cursor: pointer;
   clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
@@ -365,7 +364,7 @@ body {
 .exchange-pills-wrap {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -376,7 +375,6 @@ body {
   padding: 0.65rem 1.5rem;
   background: rgba(10, 16, 30, 0.9);
   border: 1px solid var(--border-cyan);
-  /* clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); */
   border-bottom-right-radius: 12px;
   border-top-left-radius: 12px;
   font-weight: 700;
@@ -677,7 +675,7 @@ body {
 }
 
 /* ========================================================= */
-/* Section 3: TOKENOMICS SECTION (Exact Match to Image 1 & 2) */
+/* Section 3: TOKENOMICS SECTION */
 /* ========================================================= */
 .tokenomics-section {
   position: relative;
@@ -919,9 +917,7 @@ body {
   text-decoration: none;
 }
 
-/* ========================================================= */
-/* FOOTER SECTION (Exact Match to User Image 3 & Image 4 Mask) */
-/* ========================================================= */
+/* FOOTER SECTION */
 footer {
   position: relative;
   z-index: 2;
@@ -1050,42 +1046,41 @@ footer {
   opacity: 1;
 }
 
-/* Responsive Breakpoints Across Devices */
+/* ========================================================= */
+/* COMPREHENSIVE MOBILE & TABLET RESPONSIVE STYLING */
+/* (Pixel-Exact Match to User Mobile Screenshot) */
+/* ========================================================= */
+
 @media (max-width: 1024px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 992px) {
-  .hero-polygon-content {
-    padding: 1.5rem;
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
   }
 
-  .hero-frame-body, .products-grid-layout, .tokenomics-grid {
-    grid-template-columns: 1fr;
+  .app-container {
+    padding: 0 0.85rem;
+  }
+
+  .announcement-bar {
+    flex-direction: column;
     text-align: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
   }
 
-  .hero-frame-body h1 {
-    font-size: 2.5rem;
+  /* Hero Section Mobile Frame */
+  .hero-polygon-content {
+    padding: 1.5rem 1.25rem 2.5rem;
   }
 
-  .hero-frame-body p {
-    margin: 0 auto 2rem auto;
-  }
-
-  .roadmap-staggered-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .roadmap-col-right {
-    margin-top: 0;
-  }
-
-  .roadmap-center-axis {
-    display: none;
+  .frame-nav {
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   .frame-nav-links {
@@ -1096,10 +1091,11 @@ footer {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 75px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: rgba(8, 13, 27, 0.98);
+    backdrop-filter: blur(20px);
     padding: 1.5rem;
     border-bottom: 1px solid var(--border-cyan);
     z-index: 100;
@@ -1109,39 +1105,243 @@ footer {
     display: block;
   }
 
+  .btn-dapp-wrap {
+    display: none; /* Keep mobile header clean */
+  }
+
+  .hero-frame-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-frame-body h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-frame-body p {
+    font-size: 0.95rem;
+    margin: 0 auto 1.75rem auto;
+  }
+
+  .robot-hero-stage {
+    max-width: 290px;
+  }
+
+  .robot-floating-img {
+    margin-bottom: -35px;
+  }
+
+  /* Exchanges Bar */
+  .exchanges-bar {
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 4rem;
+  }
+
+  .exchanges-label {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .exchange-pills-wrap {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .exchange-pill {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* Section Title & Badges Centered */
+  .section-badge-ellipse {
+    display: table;
+    margin: 0 auto 1rem auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Our Products Section Mobile */
+  .products-section {
+    margin-bottom: 5rem;
+  }
+
+  .products-grid-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
   .product-badge-align-right {
     justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .product-laptop-wrap img {
+    max-width: 320px;
+  }
+
+  .product-desc-card {
+    padding: 1.75rem 1.25rem;
+    text-align: left;
+  }
+
+  .product-desc-card p {
+    font-size: 0.925rem;
+    line-height: 1.65;
+  }
+
+  /* Road Map Section Mobile (Vertical Stack) */
+  .roadmap-section {
+    margin-bottom: 5rem;
+  }
+
+  .roadmap-staggered-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .roadmap-col-left, .roadmap-col-right {
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .roadmap-center-axis, .timeline-node-dot {
+    display: none;
+  }
+
+  .roadmap-phase-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Tokenomics Section Mobile */
+  .tokenomics-section {
+    margin-bottom: 5rem;
+  }
+
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .tokenomics-info p.tokenomics-desc {
+    margin: 1.25rem auto 1.75rem auto;
+    font-size: 0.95rem;
+  }
+
+  .audited-by-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .audited-pill-container {
+    flex-direction: column;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+
+  .audited-brand-badge, .audited-address-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tokenomics-graphic-wrap img {
+    max-width: 320px;
+  }
+
+  /* Features Grid Mobile (1 Column) */
+  .features-section {
+    margin-bottom: 5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Blockchain Grid Mobile (2 Columns) */
+  .blockchain-section {
+    margin-bottom: 4rem;
+  }
+
+  .blockchain-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .chain-card {
+    padding: 0.85rem 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .chain-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .chain-name {
+    font-size: 0.95rem;
+  }
+
+  /* Footer Mobile */
+  footer {
+    margin-top: 3rem;
+  }
+
+  .footer-content-body {
+    padding: 2.25rem 1.5rem 2rem;
   }
 
   .footer-grid-columns {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-brand-subtitle {
+    margin: 1rem auto 1.5rem auto;
   }
 
   .footer-social-row {
     justify-content: center;
   }
 
+  .footer-links-list {
+    align-items: center;
+  }
+
   .footer-copyright-row {
     justify-content: center;
+    text-align: center;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .hero-frame-body h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
+  .section-title {
+    font-size: 1.6rem;
   }
 
-  .announcement-bar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .exchanges-bar {
-    justify-content: center;
+  .blockchain-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initBackgroundCanvas();
   initProductCarousel();
+  initFeaturesCarousel();
   initCopyAddress();
   initNavScroll();
   initMobileMenu();
@@ -123,8 +124,8 @@ function initProductCarousel() {
     currentIndex = index;
     const data = productItems[currentIndex];
 
-    badgeEl.textContent = data.title;
-    containerEl.innerHTML = data.paragraphs.map(p => `<p>${p}</p>`).join('');
+    if (badgeEl) badgeEl.textContent = data.title;
+    if (containerEl) containerEl.innerHTML = data.paragraphs.map(p => `<p>${p}</p>`).join('');
 
     dots.forEach((dot, idx) => {
       if (idx === currentIndex) {
@@ -154,7 +155,48 @@ function initProductCarousel() {
   }
 }
 
-// 3. Copy Contract Address
+// 3. Features Section Carousel for Mobile
+function initFeaturesCarousel() {
+  const featureCards = document.querySelectorAll('.features-grid .feature-card-wrap');
+  const prevBtn = document.getElementById('prev-feature-btn');
+  const nextBtn = document.getElementById('next-feature-btn');
+  let currentFeatureIndex = 0;
+
+  function renderFeatures() {
+    if (window.innerWidth <= 768) {
+      featureCards.forEach((card, index) => {
+        if (index === currentFeatureIndex) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    } else {
+      featureCards.forEach(card => {
+        card.style.display = 'block';
+      });
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentFeatureIndex = (currentFeatureIndex - 1 + featureCards.length) % featureCards.length;
+      renderFeatures();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentFeatureIndex = (currentFeatureIndex + 1) % featureCards.length;
+      renderFeatures();
+    });
+  }
+
+  window.addEventListener('resize', renderFeatures);
+  renderFeatures();
+}
+
+// 4. Copy Contract Address
 function initCopyAddress() {
   const copyBtn = document.getElementById('copy-btn');
   const fullAddress = "0x71F84c982390234a9B489230582030048293a9B4";
@@ -183,7 +225,7 @@ function initCopyAddress() {
   }
 }
 
-// 4. Smooth Nav Active Link Update on Scroll
+// 5. Smooth Nav Active Link Update on Scroll
 function initNavScroll() {
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.frame-nav-link');
@@ -209,7 +251,7 @@ function initNavScroll() {
   });
 }
 
-// 5. Mobile Menu Toggle Listener
+// 6. Mobile Menu Toggle Listener
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-toggle');
   const navMenu = document.getElementById('nav-menu');
