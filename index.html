@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentify - Revolutionizing Blockchain with AI Agents</title>
+  <meta name="description" content="Agentify simplifies blockchain with AI agents, enabling easy creation, monetization, and integration of smart contracts, powered by $AGY tokens.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Animated Background Canvas & Glows -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <div class="app-container">
+    
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <span class="announcement-badge">AGENTIFY LAUNCH</span>
+      <span class="announcement-text">Trading Live Now</span>
+    </div>
+
+    <!-- User's Exact Polygon Cut Frame Container -->
+    <div class="hero-polygon-container" id="explore">
+      <div class="hero-polygon-bg-image"></div>
+      
+      <div class="hero-polygon-content">
+        <!-- Header / Navigation Bar inside Frame -->
+        <nav class="frame-nav">
+          <a href="#" class="brand-wrap">
+            <img src="assets/logo.png" alt="Agentify Emblem Logo" class="brand-logo-img">
+            <span class="brand-title">AGENTIFY</span>
+            <span class="lang-selector">EN <i class="fa-solid fa-chevron-down"></i></span>
+          </a>
+
+          <button class="mobile-menu-btn" id="mobile-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul class="frame-nav-links" id="nav-menu">
+            <li><a href="#products" class="frame-nav-link active">Products <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li><a href="#roadmap" class="frame-nav-link">Road Map</a></li>
+            <li><a href="#tokenomics" class="frame-nav-link">Tokenomics</a></li>
+            <li><a href="#features" class="frame-nav-link">Features</a></li>
+            <li><a href="#blockchains" class="frame-nav-link">Community <i class="fa-solid fa-chevron-down"></i></a></li>
+          </ul>
+
+          <div class="btn-dapp-wrap">
+            <a href="#explore" class="btn-dapp">Launch DAPP</a>
+          </div>
+        </nav>
+
+        <!-- Hero Content Body inside Frame -->
+        <div class="hero-frame-body">
+          <div class="hero-text-col">
+            <h1>Revolutionizing<br>Blockchain with <span class="ai-agents-text">AI Agents!</span></h1>
+            <p>
+              Agentify simplifies blockchain with AI agents, enabling easy creation, monetization, and integration of smart contracts, powered by $AGY tokens.
+            </p>
+            <div class="btn-explore-wrap">
+              <a href="#products" class="btn-explore">
+                <span>Explore</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-robot-col">
+            <div class="robot-hero-stage">
+              <img src="assets/robot_hero.png" alt="Agentify 3D AI Robot Mascot" class="robot-floating-img">
+              <img src="assets/pedestal_hero.png" alt="Hologram Pedestal Base Platform" class="pedestal-base-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Exchanges Bar ("Available on:") -->
+    <div class="exchanges-bar">
+      <span class="exchanges-label">Available on:</span>
+      <div class="exchange-pills-wrap">
+        <div class="exchange-pill">
+          <i class="fa-solid fa-k"></i>
+          <span>KUCOIN</span>
+        </div>
+        <div class="exchange-pill">
+          <i class="fa-solid fa-m"></i>
+          <span>MEXC</span>
+        </div>
+        <div class="exchange-pill">
+          <i class="fa-solid fa-g"></i>
+          <span>Gate.io</span>
+        </div>
+        <div class="exchange-pill">
+          <i class="fa-solid fa-stroopwafel"></i>
+          <span>PancakeSwap</span>
+        </div>
+        <div class="exchange-pill">
+          <i class="fa-solid fa-b"></i>
+          <span>bitpanda</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Range Of Product Section -->
+    <section class="products-section" id="products">
+      <div class="section-badge-ellipse">OUR PRODUCTS</div>
+      <h2 class="section-title">Our Range Of Product</h2>
+      
+      <div class="products-grid-layout">
+        
+        <!-- Left: Laptop Graphic -->
+        <div class="product-laptop-wrap">
+          <img src="assets/product_laptop.png" alt="Agentify AI Product Laptop Showcase">
+        </div>
+
+        <!-- Right: Badge, Description Card & Carousel Controls -->
+        <div class="product-info-col">
+          
+          <!-- Header Badge (Aligned Right) -->
+          <div class="product-badge-align-right">
+            <div class="product-header-badge">
+              <div class="badge-icon-box">
+                <i class="fa-solid fa-head-side-virus"></i>
+              </div>
+              <div class="badge-text-title" id="product-title-badge">AGENT CREATION</div>
+            </div>
+          </div>
+
+          <!-- Description Chamfer Cut Card -->
+          <div class="product-desc-card-wrap">
+            <div class="product-desc-card" id="product-description-container">
+              <p>
+                This module lets developers create AI-powered agents to interact with smart contracts easily. By uploading the contract ABI and details like address and agent name, the system analyzes functions and maps them to user-friendly prompts.
+              </p>
+              <p>
+                It removes the need for manual coding, making blockchain interactions simple and accessible for both developers and non-technical users.
+              </p>
+            </div>
+          </div>
+
+          <!-- Carousel Controls Row -->
+          <div class="product-controls-row">
+            <div class="carousel-dots" id="carousel-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+            </div>
+
+            <div class="carousel-arrows">
+              <div class="arrow-btn-wrap">
+                <button class="arrow-btn" id="prev-product-btn"><i class="fa-solid fa-arrow-left"></i></button>
+              </div>
+              <div class="arrow-btn-wrap">
+                <button class="arrow-btn active-next" id="next-product-btn"><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Road Map Section -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="section-badge-ellipse">ROAD MAP</div>
+      <h2 class="section-title">Secure Onboarding and Marketplace Integration</h2>
+      <p class="section-subtitle">
+        Establish a secure user onboarding system with wallet integration launch agentify marketplace (V1) for browsing and using agents provide initial prebuilt agents
+      </p>
+
+      <div class="roadmap-staggered-container">
+        
+        <!-- Left Column: Phase 1 & Phase 3 -->
+        <div class="roadmap-col-left">
+          
+          <!-- Phase 1 Card -->
+          <div class="roadmap-card-wrap">
+            <div class="roadmap-phase-card">
+              <h3 class="phase-title-text">Phase 1:</h3>
+              <ul class="roadmap-bullets">
+                <li>Swap Agent for cross-chain token swaps</li>
+                <li>Bridge Agent for asset transfers between blockchains</li>
+                <li>Coin Price Tracker for real-time token alerts</li>
+              </ul>
+              <p class="phase-paragraph">Develop a robust backend for smooth execution</p>
+              <p class="phase-paragraph">Deploy on test net for thorough pre-launch testing</p>
+            </div>
+          </div>
+
+          <!-- Phase 3 Card -->
+          <div class="roadmap-card-wrap">
+            <div class="roadmap-phase-card">
+              <h3 class="phase-title-text">Phase 3:</h3>
+              <ul class="roadmap-bullets">
+                <li>Develop a graphical workflow builder for automated agent execution</li>
+                <li>Drag-and-drop interface to create workflows (e.g., swap tokens → bridge → stake)</li>
+                <li>Enable conditional logic with automated triggers like price-based swaps</li>
+                <li>Support agent chaining for sequential task execution</li>
+                <li>Conduct user testing for usability validation</li>
+                <li>Deploy on main net for public access</li>
+                <li>Deliver an intuitive UI for managing tasks and conditions</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Center Axis & Nodes -->
+        <div style="position: relative; height: 100%;">
+          <div class="roadmap-center-axis"></div>
+          <div class="timeline-node-dot node-phase1"></div>
+          <div class="timeline-node-dot node-phase2"></div>
+          <div class="timeline-node-dot node-phase3"></div>
+        </div>
+
+        <!-- Right Column: Phase 2 & Phase 4 (Staggered Down) -->
+        <div class="roadmap-col-right">
+          
+          <!-- Phase 2 Card -->
+          <div class="roadmap-card-wrap">
+            <div class="roadmap-phase-card">
+              <h3 class="phase-title-text">Phase 2:</h3>
+              
+              <h4 class="phase-subheading">Expand platform with new prebuilt agents:</h4>
+              <ul class="roadmap-bullets">
+                <li>Portfolio Tracker Agent for monitoring crypto holdings</li>
+                <li>Yield Farming Agent for tracking farming pools and APY</li>
+              </ul>
+
+              <h4 class="phase-subheading">Introduce monetization models:</h4>
+              <ul class="roadmap-bullets">
+                <li>Usage-based pricing for features like gasless swaps and price alerts</li>
+                <li>Subscription plans with benefits like lower gas fees and priority support</li>
+              </ul>
+
+              <p class="phase-paragraph">
+                Enhance marketplace with better filters, descriptions, user reviews, and an expanded marketplace, monetization options, and improved user experience
+              </p>
+            </div>
+          </div>
+
+          <!-- Phase 4 Card -->
+          <div class="roadmap-card-wrap">
+            <div class="roadmap-phase-card">
+              <h3 class="phase-title-text">Phase 4:</h3>
+              <ul class="roadmap-bullets">
+                <li>Enable developers to build, publish, and monetize custom agents</li>
+                <li>Full public launch of Agentify Marketplace</li>
+                <li>Governance system integration & multi-chain expansion</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tokenomics Section (Exact Match to User Image 1 & 2) -->
+    <section class="tokenomics-section" id="tokenomics">
+      <div class="tokenomics-grid">
+        <div class="tokenomics-info">
+          <div class="section-badge-ellipse">TOKENOMICS</div>
+          <h2 class="section-title">$AGY Power Agentify :</h2>
+          <p class="tokenomics-desc">
+            Developers stake tokens to publish agents, earn rewards, and drive growth while reducing circulation for ecosystem stability.
+          </p>
+          
+          <div class="audited-by-wrap">
+            <div class="audited-by-label">Audited by :</div>
+            <div class="audited-pill-container">
+              <div class="audited-brand-badge">
+                <img src="assets/logo.png" alt="Agentify Logo">
+                <span>AGENTIFY</span>
+              </div>
+              <div class="audited-address-badge">
+                <span id="contract-addr">Oc..ffeevgffd</span>
+                <button id="copy-btn" title="Copy Contract Address"><i class="fa-regular fa-copy"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tokenomics-graphic-wrap">
+          <img src="assets/token_graphic.png" alt="Agentify $AGY Staking Utility & Ecosystem Graphic">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-badge-ellipse">FEATURES</div>
+      
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card-wrap">
+          <div class="feature-card">
+            <div class="feature-icon-top">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Contract Audit</h3>
+              <p class="feature-desc">Transparent AI audits for smart contracts ensuring security protocols are met across all networks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card-wrap">
+          <div class="feature-card">
+            <div class="feature-icon-top">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">AI Powered Agent Generation</h3>
+              <p class="feature-desc">Agentify's AI engine enables developers to instantiate custom autonomous AI agents with zero manual coding, driving unprecedented scalability.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card-wrap">
+          <div class="feature-card">
+            <div class="feature-icon-top">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Infrastructure & Orchestration</h3>
+              <p class="feature-desc">Distributed node architecture providing high-speed cross-chain execution and multi-agent coordination.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card-wrap">
+          <div class="feature-card">
+            <div class="feature-icon-top">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Monetization & Marketplace</h3>
+              <p class="feature-desc">Turn custom agents into revenue streams with on-chain licensing and decentralized marketplace integration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls" style="margin-top: 2rem; justify-content: flex-end;">
+        <div class="carousel-arrows">
+          <div class="arrow-btn-wrap">
+            <button class="arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          </div>
+          <div class="arrow-btn-wrap">
+            <button class="arrow-btn active-next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blockchain Support Grid Section -->
+    <section class="blockchain-section" id="blockchains">
+      <h2 class="section-title">Truly Extensive Blockchain Support</h2>
+      
+      <div class="blockchain-grid">
+        <!-- ETH -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon"><i class="fa-brands fa-ethereum"></i></div>
+            <div class="chain-info">
+              <div class="chain-name">ETH</div>
+              <div class="chain-sub">Ethereum</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AVAX -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">▲</div>
+            <div class="chain-info">
+              <div class="chain-name">AVAX</div>
+              <div class="chain-sub">Avalanche</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MATIC -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">⬡</div>
+            <div class="chain-info">
+              <div class="chain-name">MATIC</div>
+              <div class="chain-sub">Polygon</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARB -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">◈</div>
+            <div class="chain-info">
+              <div class="chain-name">ETH</div>
+              <div class="chain-sub">Arbitrum</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">OP</div>
+            <div class="chain-info">
+              <div class="chain-name">OP</div>
+              <div class="chain-sub">Optimism</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BSC -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">❖</div>
+            <div class="chain-info">
+              <div class="chain-name">BSC</div>
+              <div class="chain-sub">BNB Smart Chain</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARB -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">⚡</div>
+            <div class="chain-info">
+              <div class="chain-name">ARB</div>
+              <div class="chain-sub">Arbitrum</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOL -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">◎</div>
+            <div class="chain-info">
+              <div class="chain-name">SOL</div>
+              <div class="chain-sub">Solana</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRX -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon">▼</div>
+            <div class="chain-info">
+              <div class="chain-name">TRX</div>
+              <div class="chain-sub">Tron</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BTC -->
+        <div class="chain-card-wrap">
+          <div class="chain-card">
+            <div class="chain-icon"><i class="fa-brands fa-bitcoin"></i></div>
+            <div class="chain-info">
+              <div class="chain-name">BTC</div>
+              <div class="chain-sub">Bitcoin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-docs-wrap">
+        <a href="#blockchains" class="btn-docs">
+          <span>View Documentation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Section (Exact Match to User Image 3 & Image 4 Mask) -->
+    <footer>
+      <div class="footer-frame-container">
+        <div class="footer-polygon-bg-image"></div>
+
+        <div class="footer-content-body">
+          <div class="footer-grid-columns">
+            
+            <!-- Left Column: Brand & Subtitle & Social Icons -->
+            <div class="footer-brand-col">
+              <a href="#" class="brand-wrap">
+                <img src="assets/logo.png" alt="Agentify Emblem Logo" class="brand-logo-img">
+                <span class="brand-title">AGENTIFY</span>
+              </a>
+              <p class="footer-brand-subtitle">
+                #1 Secure AI Infrastructure Layer build on Decentralized Physical Infrastructure Network.
+              </p>
+              <div class="footer-social-row">
+                <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+
+            <!-- Middle Column: Navigation Links -->
+            <div class="footer-links-col">
+              <ul class="footer-links-list">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#roadmap">Road Map</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#blockchains">Community</a></li>
+              </ul>
+            </div>
+
+            <!-- Right Column: Contact Address Info -->
+            <div class="footer-contact-col">
+              <div class="footer-contact-info">
+                <p>Greyson Lane 6212-648</p>
+                <p>Wortund, Palarni.</p>
+                <p style="margin-top: 1rem; color: #ffffff;">Mobile : +91 99887 76655</p>
+              </div>
+            </div>
+
+          </div>
+
+         
+
+        </div>
+         <!-- Bottom Right Copyright Row -->
+          <div class="footer-copyright-row">
+            <span>Copyright ©2025 AGENTIFY., Ltd. All right reserved</span>
+          </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-text">Contract address copied to clipboard!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
