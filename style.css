@@ -1338,6 +1338,7 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     padding: 0.85rem 1.25rem;
     margin-bottom: 0;
+    z-index: 100000000;
   }
 
   .hero-polygon-container {
