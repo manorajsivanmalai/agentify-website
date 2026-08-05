@@ -202,6 +202,7 @@ body {
   padding-bottom: 2rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000000;
 }
 
 .brand-wrap {
@@ -1331,14 +1332,13 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999999;
     background: rgba(5, 8, 17, 0.96);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-cyan);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     padding: 0.85rem 1.25rem;
     margin-bottom: 0;
-    z-index: 100000000;
+    z-index: 9900000000;
   }
 
   .hero-polygon-container {
