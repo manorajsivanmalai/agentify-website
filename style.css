@@ -194,15 +194,22 @@ body {
   padding: 1.75rem 2.5rem 3.5rem;
 }
 
-/* Frame Navbar inside Hero Polygon Frame */
+/* Standalone Main Header outside hero polygon frame */
+.main-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 .frame-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 1000000;
+  z-index: 100;
 }
 
 .brand-wrap {
@@ -1326,23 +1333,33 @@ footer {
 
  }
 
-  /* Fixed Mobile Header Navbar */
-  .frame-nav {
-    position: fixed;
+  /* Fixed Standalone Mobile Header Navbar */
+  .main-header {
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(5, 8, 17, 0.96);
+    z-index: 9999999;
+    background: rgba(5, 8, 17, 0.98);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-cyan);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    padding: 0.85rem 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .frame-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: none;
+    padding: 0.85rem 0.75rem;
     margin-bottom: 0;
-    z-index: 9900000000;
   }
 
   .hero-polygon-container {
-    margin-top: 75px;
+    margin-top: 1rem;
   }
 
   .hero-polygon-bg-image {
