@@ -114,7 +114,7 @@ body {
   padding: 0 1.25rem;
 }
 
-/* Top Announcement Banner (Matches Figma Desktop Image) */
+/* Top Announcement Banner (Linear Color Animation Changing Every Sec) */
 .announcement-bar {
   position: relative;
   z-index: 2;
@@ -122,14 +122,33 @@ body {
   margin-top: 0.75rem;
   margin-bottom: 1.25rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(90deg, #10b981 0%, #293B93 45%, #0b1120 100%);
-  border-radius: 4px;
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: linear-gradient(90.22deg, #157626 34.24%, #424E7A 61.99%);
+  background-size: 300% 100%;
+  animation: announcement-color-linear 10s linear infinite;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 1.25rem;
   font-size: 0.875rem;
   font-family: var(--font-body);
+}
+
+@keyframes announcement-color-linear {
+  0% {
+    background-position: 0% 50%;
+  }
+   
+  25% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .announcement-badge {
@@ -142,7 +161,7 @@ body {
 }
 
 .announcement-text {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
   font-size: 0.8rem;
 }
@@ -669,6 +688,92 @@ body {
   margin-bottom: 7rem;
 }
 
+.roadmap-decorative-line {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+}
+
+ .line-left-start {
+    top: -151px;
+    left: -60px;
+    height: 344px;
+    width: auto;
+}
+
+
+.line-right-end {
+    top: 197px;
+    left: -32px;
+    height: 900px;
+    width: auto;
+}
+
+.line-right1-end{
+    top: 500px;
+    right: 0;
+    height: 699px;
+    width: auto;
+}
+.line-token-end{
+top: -91px;
+    left: -41px;
+    height: 526px;
+    width: auto;
+}
+.line-token1-end{
+    top: -91px;
+    right: -41px;
+    height: 526px;
+    width: auto;
+}
+.line-token2-end{
+    bottom: -54px;
+    right: 76px;
+    height: 43px;
+}
+
+.line-feature-end{
+      top: 55px;
+    left: -34px;
+    height: 333px;
+}
+
+.line-feature1-end{
+        top: 46px;
+    right: -34px;
+    height: 394px;
+}
+
+.line-feature2-end{
+   top: 428px;
+    right: -34px;
+    height: 155px;
+}
+.line-bs-end{
+   top: 45px;
+    left: -45px;
+    height: 414px;
+}
+
+.line-bs1-end{
+    top: 45px;
+    right: -45px;
+    height: 414px;
+}
+
+.roadmap-center-line-img {
+  height: 846px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.6));
+  right: -41px;
+  top: 136px;
+}
+
 .roadmap-staggered-container {
   display: grid;
   grid-template-columns: 1fr 30px 1fr;
@@ -680,15 +785,7 @@ body {
 }
 
 .roadmap-center-axis {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, #10b981 0%, #00f2fe 50%, #3b82f6 100%);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.7);
-  z-index: 1;
+  display: none;
 }
 
 .node-phase1 { top: 120px; }
@@ -1021,7 +1118,23 @@ body {
   font-family: var(--font-body);
 }
 
+.section-black{
+  display: flex;
+    justify-content: center;
+    padding: 0px 225px;
+    align-items: center;
+}
+.section-black .section-title {
+    font-size: 50px;
+    line-height: 1.15;
+    letter-spacing: 3px;
+    text-align: -webkit-center;
+    margin-bottom: 0px;
+}
+
 .btn-docs-wrap {
+      position: relative;
+    left: 45%;
   display: inline-block;
   background: linear-gradient(135deg, rgba(0, 242, 254, 0.5), rgba(16, 185, 129, 0.5));
   padding: 1.5px;
@@ -1200,6 +1313,18 @@ footer {
     display: none !important;
   }
 
+  .section-black{
+  padding: 0px 0px;
+  }
+ .section-black .section-title {
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: 3px;
+    text-align: -webkit-center;
+    margin-bottom: 0px;
+
+ }
+
   /* Fixed Mobile Header Navbar */
   .frame-nav {
     position: fixed;
@@ -1356,6 +1481,7 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 2rem;
+
   }
 
   .section-subtitle {
@@ -1404,6 +1530,10 @@ footer {
     margin-bottom: 5rem;
   }
 
+  .roadmap-decorative-line {
+    display: none;
+  }
+
   .roadmap-staggered-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1414,7 +1544,7 @@ footer {
     margin-top: 0;
   }
 
-  .roadmap-center-axis, .timeline-node-dot {
+  .roadmap-center-axis, .timeline-node-dot, .roadmap-center-line-img {
     display: none;
   }
 
@@ -1540,3 +1670,4 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
